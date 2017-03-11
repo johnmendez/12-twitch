@@ -4,21 +4,62 @@
 // $fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
 @import 'font-awesome';
 @import 'box-sizing';
+@import 'resets';
+
 
 .container {
   display: flex;
+  height: 100vh;
 }
 
 .banner {
   display: flex;
+  flex-basis: 20%;
   flex-direction: column;
+  height: 100vh;
+  padding: 0 2rem;
+  background: #17141F;
+  color: grey;
+  font-size: 0.9rem;
+  overflow: scroll;
 
   &__search-bar {
-    margin-top: 1rem;
+    max-width: 10rem;
+    // height: 1rem;
+    margin: 1rem auto;
+    padding: 1rem;
+    border: 0;
+    outline: purple;
+    background: gray;
+    color: white;
   }
 }
 
-.grid-item {
+.grid {
   display: flex;
-  flex-direction: column;
+  flex-basis: calc(80%);
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.game-item {
+  flex-basis: calc(100% / 5 - 4rem);
+  flex-grow: 1;
+  padding-left: 1rem;
+
+  &__pic {
+    max-width: 20rem;
+    max-height: 15rem;
+  }
+
+  &__name {
+    width: 12rem;
+    margin: 0;
+  }
+
+  &__popularity {
+    margin-top: 0.5rem;
+    color: gray;
+  }
 }
